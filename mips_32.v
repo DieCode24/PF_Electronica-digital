@@ -26,6 +26,7 @@ module mips_32 (
     wire [1:0] alu_op;
     wire sign_or_zero;
     wire [4:0] write_reg;
+    wire jr_control;  // Señal de control para jr
 
     // PC logic
     reg [31:0] pc;
@@ -60,6 +61,13 @@ module mips_32 (
         .sign_or_zero(sign_or_zero)
     );
 
+    // JR Control
+    JR_Control jrc (
+        .opcode(instr[31:26]),
+        .funct(instr[5:0]),
+        .jr_control(jr_control)
+    );
+
     // Register file
     reg_file rf (
         .clk(clk),
@@ -77,9 +85,9 @@ module mips_32 (
 
     // ALU control unit
     ALUControl alu_ctrl (
-        .ALU_Control(alu_control),
-        .ALUOp(alu_op),
-        .Function(instr[5:0])
+        .alu_op(alu_op),
+        .funct(instr[5:0]),
+        .alu_control(alu_control)
     );
 
     // ALU
@@ -109,6 +117,6 @@ module mips_32 (
 
     // Next PC logic
     assign pc_next = pc + 32'b1;
-    assign pc_in = jump ? {pc[31:28], instr[25:0], 2'b00} : branch & zero ? pc_next + sign_ext_imm : pc_next;
+    assign pc_in = jr_control ? reg_data1 : (jump ? {pc[31:28], instr[25:0], 2'b00} : (branch & zero ? pc_next + sign_ext_imm : pc_next));
 
 endmodule
