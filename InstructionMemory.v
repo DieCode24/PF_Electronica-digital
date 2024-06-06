@@ -20,7 +20,7 @@ module InstructionMemory(
         memory[12] = 32'h01095023; // add $10,$8,$9
         memory[13] = 32'h00000000; // NOP
         // Fill the rest with NOPs
-        integer i;
+        integer i; // Corrección: Declarar la variable i como integer
         for (i = 14; i < 128; i = i + 1) begin
             memory[i] = 32'h00000000;
         end

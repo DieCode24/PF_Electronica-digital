@@ -10,6 +10,8 @@ module DataMemory(
 
     // Inicializar la memoria de datos
     initial begin
+	 
+		integer i; // Corrección: Declarar la variable i como integer
         // Inicializar las posiciones de memoria restantes con ceros
         for (int i = 0; i < 100; i = i + 1) begin
             memory[i] = 32'h00000000;

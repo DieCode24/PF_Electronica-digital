@@ -1,5 +1,5 @@
-Analysis & Synthesis report for test
-Thu Jun  6 11:12:50 2024
+Analysis & Elaboration report for test
+Thu Jun  6 14:19:26 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -34,26 +34,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Jun  6 11:12:50 2024              ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name               ; test                                           ;
-; Top-level Entity Name       ; test                                           ;
-; Family                      ; Cyclone V                                      ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Failed - Thu Jun  6 14:19:26 2024              ;
+; Quartus Prime Version         ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                 ; test                                           ;
+; Top-level Entity Name         ; test                                           ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -139,30 +155,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Jun  6 11:12:41 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
+    Info: Processing started: Thu Jun  6 14:19:13 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tb_mips32.v
@@ -180,18 +180,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file mips.v
 Error (10170): Verilog HDL syntax error at InstructionMemory.v(23) near text: "integer";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/InstructionMemory.v Line: 23
 Error (10112): Ignored design unit "InstructionMemory" at InstructionMemory.v(1) due to previous errors File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/InstructionMemory.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file instructionmemory.v
-Info (12021): Found 1 design units, including 1 entities, in source file datamemory.v
-    Info (12023): Found entity 1: DataMemory File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 1
+Error (10170): Verilog HDL syntax error at DataMemory.v(16) near text: "i";  expecting "=". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 16
+Error (10170): Verilog HDL syntax error at DataMemory.v(16) near text: "<";  expecting "<=", or "=". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 16
+Error (10170): Verilog HDL syntax error at DataMemory.v(16) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 16
+Error (10112): Ignored design unit "DataMemory" at DataMemory.v(1) due to previous errors File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file datamemory.v
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
     Info (12023): Found entity 1: ControlUnit File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ControlUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
     Info (12023): Found entity 1: ALUControl File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ALUControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ALU.v Line: 1
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4775 megabytes
-    Error: Processing ended: Thu Jun  6 11:12:50 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:12
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 6 errors, 1 warning
+    Error: Peak virtual memory: 4771 megabytes
+    Error: Processing ended: Thu Jun  6 14:19:26 2024
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:18
 
 
