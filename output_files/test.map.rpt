@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Thu Jun  6 03:34:55 2024
+Thu Jun  6 11:12:50 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Jun  6 03:34:55 2024              ;
+; Analysis & Synthesis Status ; Failed - Thu Jun  6 11:12:50 2024              ;
 ; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name               ; test                                           ;
 ; Top-level Entity Name       ; test                                           ;
@@ -161,33 +161,37 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Jun  6 03:34:46 2024
+    Info: Processing started: Thu Jun  6 11:12:41 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tb_mips32.v
-    Info (12023): Found entity 1: tb_mips32 File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/tb_mips32.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file reg_file.v
-    Info (12023): Found entity 1: reg_file File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/reg_file.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mips_32.v
-    Info (12023): Found entity 1: mips_32 File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/mips_32.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file jr_control.v
-    Info (12023): Found entity 1: JR_Control File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/JR_Control.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
-    Info (12023): Found entity 1: data_memory File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/data_memory.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file control.v
-    Info (12023): Found entity 1: control File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/control.v Line: 1
+    Info (12023): Found entity 1: tb_mips32 File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/tb_mips32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file signextend.v
+    Info (12023): Found entity 1: SignExtend File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/SignExtend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/RegisterFile.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: MUX2to1 File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/MUX2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: MIPS File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/MIPS.v Line: 1
+Error (10170): Verilog HDL syntax error at InstructionMemory.v(23) near text: "integer";  expecting "end". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/InstructionMemory.v Line: 23
+Error (10112): Ignored design unit "InstructionMemory" at InstructionMemory.v(1) due to previous errors File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/InstructionMemory.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file instructionmemory.v
+Info (12021): Found 1 design units, including 1 entities, in source file datamemory.v
+    Info (12023): Found entity 1: DataMemory File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/DataMemory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ControlUnit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
     Info (12023): Found entity 1: ALUControl File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ALUControl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/alu.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file instr_mem.v
-    Info (12023): Found entity 1: instr_mem File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/instr_mem.v Line: 1
-Error (12007): Top-level design entity "test" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4772 megabytes
-    Error: Processing ended: Thu Jun  6 03:34:55 2024
+    Info (12023): Found entity 1: ALU File: C:/Users/crist/Desktop/Trabajo-final_Electronica-digital/ALU.v Line: 1
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4775 megabytes
+    Error: Processing ended: Thu Jun  6 11:12:50 2024
     Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:13
+    Error: Total CPU time (on all processors): 00:00:12
 
 
